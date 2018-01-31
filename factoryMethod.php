@@ -235,11 +235,13 @@ class KidsMeal
 
 class KidsMealFactory
 {
-    protected $mainItemChoices = ['burger' => ChickenBurger::class,
+    protected $mainItemChoices = [
+        'burger' => ChickenBurger::class,
         'nuggets' => Nuggets::class
     ];
 
-    protected $drinkChoices = ['apple_juice' => AppleJuice::class,
+    protected $drinkChoices = [
+        'apple_juice' => AppleJuice::class,
         'soda' => Soda::class
     ];
 
@@ -247,7 +249,6 @@ class KidsMealFactory
         'male' => Soldier::class,
         'female' => BarbieDoll::class
     ];
-
 
 
     public function build($mainItem, $drink, $gender)
@@ -288,20 +289,16 @@ class KidsMealFactory
 
 $factory = new KidsMealFactory();
 
-$andrewsMeal = $factory->build('burger','soda', 'male');
+$andrewsMeal = $factory->build('burger', 'soda', 'male');
 
-$mariesMeal = $factory->build('nuggets','apple_juice', 'female');
+$mariesMeal = $factory->build('nuggets', 'apple_juice', 'female');
 
 echo "Andrew Got : {$andrewsMeal->getDescription()} \n";
-
 echo "Andrew Price : {$andrewsMeal->getCost()} \n";
-
 echo "Andrew Calorie:. {$andrewsMeal->getTotalCalories()}\n";
 
 echo "Marie Got: {$mariesMeal->getDescription()} \n";
-
 echo "Marie Price: {$mariesMeal->getCost()} \n";
-
 echo "Marie Calorie: {$mariesMeal->getTotalCalories()}\n";
 
 
