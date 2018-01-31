@@ -90,7 +90,7 @@ class BarbieDoll implements GirlToyInterface
     }
 }
 
-class Soldier implements GirlToyInterface
+class Soldier implements BoyToyInterface
 {
     public function getName()
     {
