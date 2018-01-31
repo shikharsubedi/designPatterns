@@ -5,6 +5,7 @@ the file factory.php shows the object oriented design of Mac Donalds Happy Meal 
 
 an example is shown below:
 
+```php
 $factory = new KidsMealFactory();
 $andrewsMeal = $factory->build('burger', 'soda', 'male');
 
@@ -17,5 +18,5 @@ echo "Andrew Calorie:. {$andrewsMeal->getTotalCalories()}\n";
 echo "Marie Got: {$mariesMeal->getDescription()} \n";
 echo "Marie Price: {$mariesMeal->getCost()} \n";
 echo "Marie Calorie: {$mariesMeal->getTotalCalories()}\n";
-
+```
 
